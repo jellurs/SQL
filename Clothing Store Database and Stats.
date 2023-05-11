@@ -1,0 +1,30 @@
+--Create a clothing store database
+
+CREATE TABLE products (id INTEGER PRIMARY KEY, item TEXT, price INTEGER, quantity INTEGER, most_popular_size TEXT);
+
+INSERT INTO products VALUES (1, "Crop Tops", 10, 20, "small");
+INSERT INTO products VALUES (2, "Tank Tops", 8, 10, "small");
+INSERT INTO products VALUES (3, "Graphic Tees", 10, 15, "large");
+INSERT INTO products VALUES (4, "Skirts", 8, 6, "medium");
+INSERT INTO products VALUES (5, "Jeans", 22, 10, "medium");
+INSERT INTO products VALUES (6, "Shorts", 18, 5, "medium");
+INSERT INTO products VALUES (7, "Socks", 6, 22, "small");
+INSERT INTO products VALUES (8, "Leggings", 15, 7, "medium");
+INSERT INTO products VALUES (9, "Bras", 12, 5, "small");
+INSERT INTO products VALUES (10, "Panties", 10, 4, "large");
+INSERT INTO products VALUES (11, "Dresses", 16, 18, "small");
+INSERT INTO products VALUES (12, "Rompers", 16, 8, "medium");
+INSERT INTO products VALUES (13, "Cardigans", 15, 5, "small");
+INSERT INTO products VALUES (14, "Jackets", 18, 6, "small");
+INSERT INTO products VALUES (15, "Sweaters", 15, 12, "large");
+
+--display the database order by price.
+SELECT * FROM products
+ORDER BY price desc;
+
+--what is the most popular size overall? 
+SELECT item, price, most_popular_size
+FROM products
+order by most_popular_size desc;
+
+
